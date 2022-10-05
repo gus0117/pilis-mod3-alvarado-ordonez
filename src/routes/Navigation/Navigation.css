@@ -1,0 +1,12 @@
+.app-title-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.app-title {
+    font-size: 3rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}

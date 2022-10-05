@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { LocationContext } from '../../context/LocationContext'
 import { getLocation } from '../../Service'
+import './CreateLocation.css';
 
 const CreateLocation = () => {
     const navigate = useNavigate();
