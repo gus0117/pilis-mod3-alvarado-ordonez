@@ -1,5 +1,10 @@
+import { useContext, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Cards from './components/Card/Cards';
+import { LocationContext } from './context/LocationContext';
+import Home from './routes/Home/Home';
+import CreateLocation from './routes/Location/CreateLocation';
+import Navigation from './routes/Navigation/Navigation';
 
 //Lista de prueba
 const list = [
@@ -22,9 +27,21 @@ const list = [
 ];
 
 function App() {
+  const { locationList, setLocationList } = useContext(LocationContext);
+
+  //Se asigna la lista de prueba
+  useEffect(()=>{
+    setLocationList(list);
+  },[])
+   
   return (
     <div className="App">
-      <Cards locationsList={list} />
+      <Routes>
+        <Route path='/' element={<Navigation />}>
+          <Route index element={<Home />} />
+          <Route path='location/create' element={<CreateLocation />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

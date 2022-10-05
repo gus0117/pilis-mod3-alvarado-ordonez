@@ -6,8 +6,8 @@ export const LocationContext = createContext({
 });
 
 export const LocationProvider = ({ children }) => {
-  const [listLocations, setListLocations] = useState([]);
-  const value = { listLocations, setListLocations };
+  const [locationList, setLocationList] = useState([]);
+  const value = { locationList, setLocationList };
 
   return (
     <LocationContext.Provider value={value}>{children}</LocationContext.Provider>

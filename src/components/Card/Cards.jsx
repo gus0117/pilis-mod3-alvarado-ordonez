@@ -1,14 +1,14 @@
 import React from 'react'
 import Card from './Card';
 
-const Cards = ({ locationsList }) => {
+const Cards = ({ locationList }) => {
 
   return (
     <div className='cards'>
       {
-        locationsList.length === 0 
+        locationList.length === 0 
         ? <span>No hay elementos</span>
-        : locationsList.map( (location) => (<Card key={location.id} location={location} />))
+        : locationList.map( (location) => (<Card key={location.id} location={location} />))
       }
     </div>
   )
