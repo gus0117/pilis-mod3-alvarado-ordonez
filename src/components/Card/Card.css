@@ -26,5 +26,16 @@
 
 .card p {
     font-size: 1.4rem;
-    text-align: justify;
+}
+
+.temp-icon {
+    color: rgb(123, 255, 0);
+}
+
+.wind-icon {
+    color: rgb(47, 224, 255);
+}
+
+.location-icon {
+    color: rgb(163, 0, 0);
 }

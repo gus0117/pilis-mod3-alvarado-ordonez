@@ -13,12 +13,9 @@ const Home = () => {
 
   return (
     <div className="container-cards">
-        
           <Link className="create-location-link" to='location/create'>
-            <div className="create-location">
               <FaPlus className="create-location-icon"/>
               <span>Create New Location</span>
-            </div>  
           </Link>
         <Cards locationList={locationList} />
     </div>

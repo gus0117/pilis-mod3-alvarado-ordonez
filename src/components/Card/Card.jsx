@@ -12,9 +12,9 @@ const Card = ({ location }) => {
     <div className="card">
       <h1 className="card-title">{name}</h1>
       <img className="card-img" src={paisaje} alt="" srcset="" />
-      <p><MdLocationPin />{lat}, {lon}</p>
-      <p><FaTemperatureLow /> {temperature} °C</p>
-      <p><BiWind /> {windspeed} km/h</p>
+      <p><MdLocationPin className='location-icon'/>{lat}, {lon}</p>
+      <p><FaTemperatureLow className='temp-icon'/> {temperature} °C</p>
+      <p><BiWind className='wind-icon'/> {windspeed} km/h</p>
     </div>
   )
 }

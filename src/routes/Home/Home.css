@@ -1,8 +1,13 @@
 .container-cards {
     margin: 20px 30px;
+    max-width: 1900px;
 }
 
-.create-location {
+.create-location-link {
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+
     float: left;
     width: 20%;
     margin-top: 25px;
@@ -19,13 +24,7 @@
     border: 1px solid rgba(255, 255, 255, 0.49);
 }
 
-.create-location-link {
-    text-decoration: none;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-.create-location:hover {
+.create-location-link:hover {
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.51);
     border-radius: 16px;
