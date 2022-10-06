@@ -1,0 +1,60 @@
+.create-location-title {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.description {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: wheat;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.7px);
+    -webkit-backdrop-filter: blur(18.7px);
+    border: 1px solid rgba(255, 255, 255, 0.49);
+}
+
+.form {
+    max-width: 600px;
+    padding: 30px;
+}
+
+.form input {
+    width: 300px;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 5px;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 5px;
+    float: right;
+    background-color: orangered;
+    font-weight: 600;
+    color: antiquewhite;
+    border-color: brown;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: antiquewhite;
+    color: orangered;
+    border-color: orangered;
+}
+
