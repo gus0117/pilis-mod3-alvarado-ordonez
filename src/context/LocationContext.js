@@ -1,4 +1,13 @@
 import { createContext, useState } from "react";
+//funcion obtener datos del local storage
+const getDataLocalStorage = () =>{
+  let array = []
+  for (let i = 0; i < localStorage.length; i++) {
+    let clave = localStorage.key(i)
+    array.push(JSON.parse(localStorage.getItem(clave)))
+  }
+  return array
+}
 
 export const LocationContext = createContext({
   locationList: [],
@@ -6,7 +15,7 @@ export const LocationContext = createContext({
 });
 
 export const LocationProvider = ({ children }) => {
-  const [locationList, setLocationList] = useState([]);
+  const [locationList, setLocationList] = useState(getDataLocalStorage);
   const value = { locationList, setLocationList };
 
   return (

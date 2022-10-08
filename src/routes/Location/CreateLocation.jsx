@@ -29,6 +29,9 @@ const CreateLocation = () => {
             .then(({ current_weather }) => {
                 let auxLocation = {...newLocation, temperature: current_weather.temperature, windspeed: current_weather.windspeed}
                 setLocationList([...locationList, auxLocation])
+                //Agregar datos al localStorage
+                localStorage.setItem(`${newLocation.id}`,JSON.stringify(auxLocation))
+                console.log(auxLocation)
                 //console.table(locationList);
                 navigate('/');
             })
@@ -58,7 +61,7 @@ const CreateLocation = () => {
                 />
                 <p>{errors.lon?.message}</p>
 
-                <button class='btn' type='submit'>Create new card</button>
+                <button className='btn' type='submit'>Create new card</button>
             </form>
         </div>
     </>

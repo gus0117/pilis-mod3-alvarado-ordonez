@@ -39,3 +39,19 @@
 .location-icon {
     color: rgb(163, 0, 0);
 }
+
+.button{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    margin-top: 10px;
+    background-color: rgba(220, 20, 60, 0.427);
+    color: rgba(0, 0, 0, 0.547);
+}
+.button:hover{
+    cursor: pointer;
+    background-color: crimson;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(220, 20, 60, 0.427);
+}
