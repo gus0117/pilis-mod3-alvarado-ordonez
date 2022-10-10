@@ -27,11 +27,11 @@ const list = [
 ];
 
 function App() {
-  const { locationList, setLocationList } = useContext(LocationContext);
+  /* const { locationList, setLocationList } = useContext(LocationContext);
   //Se asigna la lista de prueba
   useEffect(()=>{
     setLocationList(locationList);
-  },[])
+  },[]) */
    
   return (
     <div className="App">

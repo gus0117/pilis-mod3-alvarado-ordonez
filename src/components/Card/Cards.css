@@ -3,3 +3,8 @@
     float: right;
     width: 80%;
 }
+
+.no-cards {
+    color: white;
+    font-size: 2rem;
+}

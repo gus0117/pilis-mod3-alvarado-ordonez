@@ -1,12 +1,42 @@
 .app-title-container {
     display: flex;
     justify-content: center;
-    padding-top: 20px;
 }
 
-.app-title {
-    font-size: 3rem;
+.app-link {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+
+.app-icon {
+    display: inline-block;
+    font-size: 2.4rem;
+}
+
+.app-title {
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.login-container {
+    display: flex;
+    justify-content: right;
+    padding-right: 30px;
+    padding-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.login-link {
+    text-decoration: none;
+    color: white;
+}
+
+.login-icon {
+    font-size: 2rem;
+}
+
+.login-title {
+    font-size: 1.5rem;
 }
