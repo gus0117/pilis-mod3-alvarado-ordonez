@@ -5,6 +5,7 @@ import { LocationContext } from './context/LocationContext';
 import Home from './routes/Home/Home';
 import CreateLocation from './routes/Location/CreateLocation';
 import Navigation from './routes/Navigation/Navigation';
+import Login from './routes/Login/Login'
 
 //Lista de prueba
 const list = [
@@ -39,6 +40,7 @@ function App() {
         <Route path='/' element={<Navigation />}>
           <Route index element={<Home />} />
           <Route path='location/create' element={<CreateLocation />} />
+          <Route path='login' element={<Login/>} />
         </Route>
       </Routes>
     </div>
