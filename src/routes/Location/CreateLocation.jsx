@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { LocationContext } from '../../context/LocationContext'
 import { getLocation } from '../../Service'
+import { getCurrentDate } from '../../utils/Util'
 import './CreateLocation.css';
 
 const CreateLocation = () => {
@@ -16,6 +17,8 @@ const CreateLocation = () => {
         }
     });
 
+
+
     const onSubmit = (data) => {
         const newLocation = {
             id: locationList.length + 1,
@@ -23,15 +26,14 @@ const CreateLocation = () => {
             lat: data.lat,
             lon: data.lon
         }
-
         //Buscar la locacion
         getLocation(newLocation.lat, newLocation.lon)
             .then(({ current_weather }) => {
-                let auxLocation = {...newLocation, temperature: current_weather.temperature, windspeed: current_weather.windspeed}
+                let auxLocation = {...newLocation, temperature: current_weather.temperature, windspeed: current_weather.windspeed, date: getCurrentDate()}
                 setLocationList([...locationList, auxLocation])
                 //Agregar datos al localStorage
                 localStorage.setItem(`${newLocation.id}`,JSON.stringify(auxLocation))
-                console.log(auxLocation)
+                //console.log(auxLocation)
                 //console.table(locationList);
                 navigate('/');
             })

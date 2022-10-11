@@ -7,11 +7,9 @@ const Navigation = () => {
     return (
         <>
         <div className="login-container">
-        <Link to='/login'>
-        <a className="login-link" href="#">
-                <BiUserCircle className="login-icon"/>
-                <span className="login-title">Login</span>
-            </a>
+        <Link className="login-link" to='/login'>
+            <BiUserCircle className="login-icon"/>
+            <span className="login-title">Login</span>
         </Link>
           
         </div>
