@@ -18,6 +18,12 @@
     margin-top: 10px;
     
 }
+
+.input-form::placeholder {
+    color: white;
+    font-size: 1rem;
+}
+
 .img-login{
     display: block;
     margin: auto;
