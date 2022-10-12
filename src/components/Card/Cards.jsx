@@ -9,9 +9,9 @@ const Cards = ({ locationList }) => {
   const {setLocationList } = useContext(LocationContext); 
   
   const deleteCard = id =>{
-    localStorage.removeItem(id)
     locationList = locationList.filter(card=>card.id!==id)
     setLocationList(locationList)
+    localStorage.setItem("locations", JSON.stringify(locationList));
   }
 
   const refreshWeather = (id, lat, lon) => {
@@ -22,12 +22,12 @@ const Cards = ({ locationList }) => {
             location.temperature = current_weather.temperature;
             location.windspeed = current_weather.windspeed;
             location.date= getCurrentDate();
-            console.log("Actualizado")
           }
         })
 
         //Actualizar la lista
         setLocationList(locationList);
+        localStorage.setItem("locations", JSON.stringify(locationList));
       })
       .catch( (error) => console.log(error))
   }

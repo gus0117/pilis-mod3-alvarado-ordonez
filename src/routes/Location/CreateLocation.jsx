@@ -37,8 +37,10 @@ const CreateLocation = () => {
                     date: getCurrentDate()}
                 setLocationList([...locationList, auxLocation])
                 //Agregar datos al localStorage
-                localStorage.setItem(`${newLocation.id}`,JSON.stringify(auxLocation))
-                console.log(auxLocation)
+
+                //localStorage.setItem(`${newLocation.id}`,JSON.stringify(auxLocation))
+                localStorage.setItem("locations", JSON.stringify([...locationList, auxLocation]));
+                //console.log(auxLocation)
                 //console.table(locationList);
                 navigate('/');
             })
