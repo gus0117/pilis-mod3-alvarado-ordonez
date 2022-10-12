@@ -13,7 +13,8 @@ const CreateLocation = () => {
         defaultValues: {
             locationName: 'S. S. de Jujuy',
             lat: -24.1895811,
-            lon: -65.2982537
+            lon: -65.2982537,
+            urlImg: ''
         }
     });
 
@@ -24,16 +25,20 @@ const CreateLocation = () => {
             id: locationList.length + 1,
             name: data.locationName,
             lat: data.lat,
-            lon: data.lon
+            lon: data.lon,
+            urlImg: data.urlImg
         }
         //Buscar la locacion
         getLocation(newLocation.lat, newLocation.lon)
             .then(({ current_weather }) => {
-                let auxLocation = {...newLocation, temperature: current_weather.temperature, windspeed: current_weather.windspeed, date: getCurrentDate()}
+                let auxLocation = {...newLocation, 
+                    temperature: current_weather.temperature, 
+                    windspeed: current_weather.windspeed, 
+                    date: getCurrentDate()}
                 setLocationList([...locationList, auxLocation])
                 //Agregar datos al localStorage
                 localStorage.setItem(`${newLocation.id}`,JSON.stringify(auxLocation))
-                //console.log(auxLocation)
+                console.log(auxLocation)
                 //console.table(locationList);
                 navigate('/');
             })
@@ -62,6 +67,10 @@ const CreateLocation = () => {
                     {...register('lon', { required: 'Debe ingresar una longitud' })}
                 />
                 <p>{errors.lon?.message}</p>
+
+                <input type="text" placeholder='Image URL'
+                    {...register('urlImg')}
+                />
 
                 <button className='btn' type='submit'>Create new card</button>
             </form>

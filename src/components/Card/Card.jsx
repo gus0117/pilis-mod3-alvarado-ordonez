@@ -11,8 +11,8 @@ import { TbRefresh } from 'react-icons/tb';
 //Card recibe como parametro la funcion deleteCard (para borrar una tarjeta)
 const Card = ({ location ,deleteCard, refreshCard }) => {
 
-  const { id, name, lat, lon, temperature, windspeed, date } = location;
-
+  const { id, name, lat, lon, temperature, windspeed, date, urlImg } = location;
+  console.log(urlImg);
   return (
     <div className="card">
       <div className="card-head">
@@ -20,7 +20,11 @@ const Card = ({ location ,deleteCard, refreshCard }) => {
           <button className='button card-refresh' onClick={() => refreshCard(id, lat, lon)}><TbRefresh /></button>
       </div>
       <div className="card-body">
-        <img className="card-img" src={paisaje} alt="" srcSet="" />
+        { urlImg === "" ? 
+          <img className="card-img" src={paisaje} alt="Card Image" /> : 
+          <img className="card-img" src={urlImg} alt="Card image" crossOrigin='anonymous' />
+        }
+        
         <div className="lat-lon">
           <p>Latitude: {lat}</p>
           <p>Longitude: {lon}</p>
