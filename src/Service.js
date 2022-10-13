@@ -15,7 +15,13 @@ export const validateUser = async (user, pass) => {
   try{
     const response = await fetch(ENDPOINT+"/users");
     const users = response.json();
-    return users.map( u => {u.username === user && u.password === pass})
+    const validation = false;
+    let i = 0;
+    while(!validation && i < users.length){
+      validation = users[i].username === user && user[i].password === pass ? true : false
+      i++;
+    }
+    return validation;
   }
   catch {
     throw new Error("Error en la peticion");

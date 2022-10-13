@@ -1,19 +1,21 @@
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom';
-// import { LocationContext, L } from '../../context/LocationContext';
 import './Login.css'
 import logo from '../../assets/login.png'
+import { UserContext } from '../../context/UserContext';
+import { validateUser } from '../../Service';
 
 const Login = () => {
-
-//  const { setCurrentUser } = useContext(LocationContext)
+  const { setUser } = useContext(UserContext);
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate()
 
   const onSubmit = (data) => {
-    //localStorage.setItem('currentUser', JSON.stringify(data))
-    // setCurrentUser(data)
+    if(validateUser(data.username, data.password)){
+      setUser(data)
+      localStorage.setItem('currentUser', JSON.stringify(data))
+    }
     navigate('/')
   }
 
