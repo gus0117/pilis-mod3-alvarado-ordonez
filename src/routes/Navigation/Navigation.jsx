@@ -1,9 +1,10 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Navigate, Outlet } from "react-router-dom";
 import './Navigation.css';
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { BiUserCircle } from "react-icons/bi";
 import { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
+import { ImExit } from "react-icons/im";
 
 const Navigation = () => {
     const { user, setUser } = useContext(UserContext);
@@ -15,19 +16,31 @@ const Navigation = () => {
         }
     }, [])
 
+    const handleLogOut = () => {
+        setUser(null);
+        localStorage.setItem("currentUser", null);
+    }
 
     return (
         <>
         <div className="login-container">
-        <Link className="login-link" to='/login'>
-            <BiUserCircle className="login-icon"/>
-            {
-                user ? 
-                (<span className="login-title">{user.username}</span>) :
-                (<span className="login-title">Login</span>) 
-            }
-        </Link>
-          
+        {
+            user ? 
+            (
+                <div className="login-link">
+                    <ImExit className="login-icon"/>
+                    <span className="login-title log-out" onClick={handleLogOut}>Log out</span>
+                </div>
+            ) :
+            (
+                <Link className="login-link" to='/login'>
+                    <div>
+                        <BiUserCircle className="login-icon"/>
+                        <span className="login-title">Login</span> 
+                    </div>
+                </Link>
+            )
+        }
         </div>
         <div className="app-title-container">
             <Link className="app-link" to='/'>

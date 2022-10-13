@@ -1,11 +1,10 @@
-import { useContext, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { LocationContext } from './context/LocationContext';
 import Home from './routes/Home/Home';
 import CreateLocation from './routes/Location/CreateLocation';
 import Navigation from './routes/Navigation/Navigation';
 import Login from './routes/Login/Login'
+
 
 //Lista de prueba
 const list = [
@@ -28,12 +27,7 @@ const list = [
 ];
 
 function App() {
-  /* const { locationList, setLocationList } = useContext(LocationContext);
-  //Se asigna la lista de prueba
-  useEffect(()=>{
-    setLocationList(locationList);
-  },[]) */
-   
+
   return (
     <div className="App">
       <Routes>

@@ -38,5 +38,10 @@
 }
 
 .login-title {
+    margin-left: 5px;
     font-size: 1.5rem;
+}
+
+.log-out:hover {
+    cursor: pointer;
 }
