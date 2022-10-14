@@ -15,7 +15,7 @@ export const validateUser = async (user, pass) => {
   try{
     const response = await fetch(ENDPOINT+"/users");
     const users = response.json();
-    const validation = false;
+    let validation = false;
     let i = 0;
     while(!validation && i < users.length){
       validation = users[i].username === user && user[i].password === pass ? true : false
