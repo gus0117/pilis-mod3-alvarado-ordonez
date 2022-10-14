@@ -36,7 +36,7 @@ const Navigation = () => {
                 <Link className="login-link" to='/login'>
                     <div>
                         <BiUserCircle className="login-icon"/>
-                        <span className="login-title">Login</span> 
+                        <span className="login-title">Log In</span> 
                     </div>
                 </Link>
             )

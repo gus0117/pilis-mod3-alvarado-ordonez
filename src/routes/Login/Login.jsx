@@ -22,15 +22,15 @@ const Login = () => {
   return (
     <div className='sign-in-container'>
     <img src={logo} className='img-login'/>
-      <span>Ingresa con tu usuario y contraseña</span>
+      <span>You can log in with your username and password</span>
       <form className='sign-in-form' onSubmit={handleSubmit(onSubmit)}>
         
         <input
           className='input-form'
           type="text"
-          placeholder='Nombre de usuario'
+          placeholder='Username'
           {...register('username', {
-              required : 'Debe ingresar su nombre de usuario'
+              required : 'You must enter an username'
             }
           )
         } />
@@ -38,17 +38,17 @@ const Login = () => {
         <input
           className='input-form'
           type='password'
-          placeholder='Contraseña'
+          placeholder='Password'
           {...register(
               'password',
               {
-                required : 'Debe ingresar su contraseña'
+                required : 'You must enter a password'
               }
             )
           }
         />
         <p>{errors.password?.message}</p>
-         <button className='btn-form' type='submit'>Iniciar Sesión</button>
+         <button className='btn-form' type='submit'>Log in</button>
       </form>
     </div>
   )

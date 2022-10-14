@@ -7,11 +7,12 @@
 .description {
     text-align: center;
     margin-top: 30px;
-    font-size: 1.5rem;
-    color: wheat;
+    font-size: 1.1rem;
+    color: #0E2A47;
 }
 
 .form-container {
+    font-family: 'Poppins', sans-serif;
     max-width: 800px;
     margin: 20px auto;
     display: flex;

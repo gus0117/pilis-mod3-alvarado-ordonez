@@ -46,3 +46,11 @@
     margin-top: 20px;
     color: white;
 }
+
+.app-description {
+    text-align: center;
+    color: gold;
+    margin: 20px 0;
+    font-size: 1.3rem;
+    background-color: black;
+}

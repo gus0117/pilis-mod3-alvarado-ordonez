@@ -14,7 +14,13 @@ const Home = () => {
   //console.log(locationList);
 
   return (
-    <div className="container-cards">
+    <>
+      <div className="app-description">
+        <p>
+          Welcome! WEATHER LOCATION APP is a Single Page Aplication (SPA) developed with React.  
+        </p>
+      </div>
+      <div className="container-cards">
           {
             user ? 
             <Link className="create-location-link" to='location/create'>
@@ -28,7 +34,8 @@ const Home = () => {
           }
           
         <Cards locationList={locationList} />
-    </div>
+      </div>
+    </>
   );
 };
 

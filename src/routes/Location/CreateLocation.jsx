@@ -52,25 +52,25 @@ const CreateLocation = () => {
         <div className='form-container'>
             <h1 className='create-location-title'>Generate a new location card</h1>
             <p className='description'>
-                You can add a new location card putting its coordinates (latitude and longitude) and its name.
+                You can add a new location card putting its coordinates (latitude and longitude) and its name. NOTE: Some images may not load due to CORS policy.
             </p>
             <form className='form' onSubmit={handleSubmit(onSubmit)}>
-                <input type="text" placeholder='Nombre de la locacion'
-                    {...register('locationName', { required: 'Debe ingresar un nombre' })}
+                <input type="text" placeholder='Location name'
+                    {...register('locationName', { required: 'You must enter a name' })}
                 />
                 <p>{errors.locationName?.message}</p>
 
-                <input type="text" placeholder='Latitud'
-                    {...register('lat', { required: 'Debe ingresar una latitud' })}
+                <input type="text" placeholder='Latitude'
+                    {...register('lat', { required: 'You must enter a latitude' })}
                 />
                 <p>{errors.lat?.message}</p>
 
-                <input type="text" placeholder='Longitud'
-                    {...register('lon', { required: 'Debe ingresar una longitud' })}
+                <input type="text" placeholder='Longitude'
+                    {...register('lon', { required: 'You must enter a longitude' })}
                 />
                 <p>{errors.lon?.message}</p>
 
-                <input type="text" placeholder='Image URL'
+                <input type="text" placeholder='Image URL (optinal)'
                     {...register('urlImg')}
                 />
 

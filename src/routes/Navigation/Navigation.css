@@ -30,6 +30,10 @@
 
 .login-link {
     text-decoration: none;
+    color: rgb(180, 179, 179);
+}
+
+.login-link:hover {
     color: white;
 }
 
