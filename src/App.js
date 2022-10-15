@@ -1,30 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
 import Home from './routes/Home/Home';
 import CreateLocation from './routes/Location/CreateLocation';
 import Navigation from './routes/Navigation/Navigation';
 import Login from './routes/Login/Login'
-
-
-//Lista de prueba
-const list = [
-  {
-    id: 0,
-    name: "S. S. de Jujuy, FI Unju",
-    lat: -24.1895811,
-    lon: -65.2982537,
-    windspeed: 2,
-    temperature: 17
-  },
-  {
-    id: 1,
-    name: "S. S. de Jujuy, FH Unju",
-    lat: -24.1877411,
-    lon: -65.3048197,
-    windspeed: 2,
-    temperature: 17
-  }
-];
 
 function App() {
 

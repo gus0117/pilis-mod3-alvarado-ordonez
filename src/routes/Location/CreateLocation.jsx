@@ -18,8 +18,6 @@ const CreateLocation = () => {
         }
     });
 
-
-
     const onSubmit = (data) => {
         const newLocation = {
             id: locationList.length + 1,
@@ -37,11 +35,7 @@ const CreateLocation = () => {
                     date: getCurrentDate()}
                 setLocationList([...locationList, auxLocation])
                 //Agregar datos al localStorage
-
-                //localStorage.setItem(`${newLocation.id}`,JSON.stringify(auxLocation))
                 localStorage.setItem("locations", JSON.stringify([...locationList, auxLocation]));
-                //console.log(auxLocation)
-                //console.table(locationList);
                 navigate('/');
             })
             .catch( (error) => console.log(error))

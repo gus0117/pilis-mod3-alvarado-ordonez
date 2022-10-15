@@ -8,9 +8,6 @@
 
 body{
   height: 100%;
-  /* background: rgb(212,23,181);
-  background: linear-gradient(149deg, rgba(212,23,181,1) 0%, rgba(240,19,101,1) 24%, rgba(245,155,36,1) 100%);
-  background-attachment: fixed; */
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;

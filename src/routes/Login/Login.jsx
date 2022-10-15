@@ -1,26 +1,39 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom';
 import './Login.css'
 import logo from '../../assets/login.png'
 import { UserContext } from '../../context/UserContext';
-import { validateUser } from '../../Service';
+//import { getUsers } from '../../Service';
 
 const Login = () => {
+  const [incorrectUser, setIncorrectUser] = useState(false);
   const { setUser } = useContext(UserContext);
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    if(validateUser(data.username, data.password)){
-      setUser(data)
-      localStorage.setItem('currentUser', JSON.stringify(data))
+    setUser(data);
+    localStorage.setItem('currentUser', JSON.stringify(data));
+    navigate('/');
+
+    //TODO validar usuario con mockapi
+    /* if(validateUser(data.username, data.password)){
+      setUser(data);
+      localStorage.setItem('currentUser', JSON.stringify(data));
+      navigate('/');
+      setIncorrectUser(false);
     }
-    navigate('/')
+    else {
+      setIncorrectUser(true);
+    } */
   }
 
   return (
     <div className='sign-in-container'>
+      {
+        incorrectUser ? <span className='incorrect-user'>Incorrect username or password.</span> : <span></span>
+      }
     <img src={logo} className='img-login'/>
       <span>You can log in with your username and password</span>
       <form className='sign-in-form' onSubmit={handleSubmit(onSubmit)}>

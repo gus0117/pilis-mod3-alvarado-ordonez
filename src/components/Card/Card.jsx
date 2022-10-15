@@ -12,7 +12,6 @@ import { TbRefresh } from 'react-icons/tb';
 const Card = ({ location ,deleteCard, refreshCard }) => {
 
   const { id, name, lat, lon, temperature, windspeed, date, urlImg } = location;
-  console.log(urlImg);
   return (
     <div className="card">
       <div className="card-head">

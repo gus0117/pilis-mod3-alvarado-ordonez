@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { LocationContext } from '../../context/LocationContext';
 import Card from './Card';
 import './Cards.css';

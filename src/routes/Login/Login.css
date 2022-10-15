@@ -10,6 +10,10 @@
     border-radius: 10px;
 }
 
+.incorrect-user {
+    color: red;
+}
+
 .input-form{
     background-color: rgb(217, 68, 98);
     border: none;
