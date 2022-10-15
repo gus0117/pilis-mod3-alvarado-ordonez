@@ -29,6 +29,17 @@ Para iniciar el proyecto:
  $ npm start
 ```
 
+## Futuras mejoras 🦾
+
+- Arreglar la logica de la validación de usuario en el login.
+
+- Mejorar el diseño de las tarjetas.
+
+- Agregar sweet alert 2 para las operaciones de eliminar y actualizar.
+
+- Desplegar la aplicación en github pages.
+
+- Agregar un filtro de busqueda de tarjetas por nombre y por fecha.
 
 ## Recursos :wrench:
 
